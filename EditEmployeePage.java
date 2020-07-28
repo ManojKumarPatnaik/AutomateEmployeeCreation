@@ -37,47 +37,47 @@ public class EditEmployeePage {
 		
 		// search for employee by full name
 		wait.until(ExpectedConditions.elementToBeClickable(byEmpSearch));
-	    driver.findElement(byEmpSearch).sendKeys(emp.get("First Name") + " " + emp.get("Middle Name") + " " + emp.get("Last Name"));
-	    wait.until(ExpectedConditions.elementToBeClickable(byBtnSearch));
-	    driver.findElement(byBtnSearch).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(byFirstMiddle));
-	    driver.findElement(byFirstMiddle).click();
+	    	driver.findElement(byEmpSearch).sendKeys(emp.get("First Name") + " " + emp.get("Middle Name") + " " + emp.get("Last Name"));
+	    	wait.until(ExpectedConditions.elementToBeClickable(byBtnSearch));
+	    	driver.findElement(byBtnSearch).click();
+	    	wait.until(ExpectedConditions.elementToBeClickable(byFirstMiddle));
+	    	driver.findElement(byFirstMiddle).click();
 	    
-	    // edit personal details
-	    wait.until(ExpectedConditions.elementToBeClickable(byBtnSave));
-	    driver.findElement(byBtnSave).click();
+	    	// edit personal details
+	    	wait.until(ExpectedConditions.elementToBeClickable(byBtnSave));
+	    	driver.findElement(byBtnSave).click();
 	    
-	    // fill in information
+	    	// fill in information
 		wait.until(ExpectedConditions.elementToBeClickable(byLicenNum));
 		driver.findElement(byLicenNum).clear();
-	    driver.findElement(byLicenNum).sendKeys(emp.get("License Number"));
+	    	driver.findElement(byLicenNum).sendKeys(emp.get("License Number"));
 	    
-	    driver.findElement(byLicExpDate).clear();
-	    driver.findElement(byLicExpDate).sendKeys(emp.get("License Expiry Date"));
-	    driver.findElement(byOtherId).clear();
-	    driver.findElement(byOtherId).sendKeys(emp.get("Other Id"));
+	    	driver.findElement(byLicExpDate).clear();
+	   	driver.findElement(byLicExpDate).sendKeys(emp.get("License Expiry Date"));
+	    	driver.findElement(byOtherId).clear();
+	    	driver.findElement(byOtherId).sendKeys(emp.get("Other Id"));
 	    
-	    if(emp.get("Gender").compareTo("Male") == 0) {
-	    	driver.findElement(byMale).click();
-	    } else {
-	    	driver.findElement(byFemale).click();
-	    }
+	    	if(emp.get("Gender").compareTo("Male") == 0) {
+	     	    driver.findElement(byMale).click();
+	    	} else {
+	    	    driver.findElement(byFemale).click();
+	    	}
 	 
-	    {
-	      WebElement dropdown = driver.findElement(byNation);
-	      dropdown.findElement(By.xpath("//option[. = '"+emp.get("Nationality") +"']")).click();
-	    }
+	    	{
+	      	  WebElement dropdown = driver.findElement(byNation);
+	      	  dropdown.findElement(By.xpath("//option[. = '"+emp.get("Nationality") +"']")).click();
+	    	}
 	    
-	    driver.findElement(byMaritalStatus).click();
-	    {
-	      WebElement dropdown = driver.findElement(byMaritalStatus);
-	      dropdown.findElement(By.xpath("//option[. = '"+ emp.get("Marital Status") +"']")).click();
-	    }
+	    	driver.findElement(byMaritalStatus).click();
+	    	{
+	      	  WebElement dropdown = driver.findElement(byMaritalStatus);
+	      	  dropdown.findElement(By.xpath("//option[. = '"+ emp.get("Marital Status") +"']")).click();
+	    	}
 	    
-	    driver.findElement(byDateOfBirth).clear();
-	    driver.findElement(byDateOfBirth).sendKeys(emp.get("Date of Birth"));
+	    	driver.findElement(byDateOfBirth).clear();
+	    	driver.findElement(byDateOfBirth).sendKeys(emp.get("Date of Birth"));
 	    
-	    // save
-	    driver.findElement(byBtnSave).click();
+	    	// save
+	    	driver.findElement(byBtnSave).click();
 	}
 }
