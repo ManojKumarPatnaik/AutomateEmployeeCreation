@@ -26,7 +26,7 @@ public class VerifyLeavePage {
 		// if element cannot be found, an exception is thrown
 		// exception is caught in AutomateEmployeeTest and fails the test
 		wait.until(ExpectedConditions.visibilityOfElementLocated(byFromToDate));
-	    driver.findElement(byFromToDate);
+	    	driver.findElement(byFromToDate);
 	   
 	}
 }
