@@ -20,6 +20,6 @@ public class LogoutPage {
 		wait.until(ExpectedConditions.elementToBeClickable(byWelcome));
 		driver.findElement(byWelcome).click();
 		wait.until(ExpectedConditions.elementToBeClickable(byLogout));
-	    driver.findElement(byLogout).click();
+	    	driver.findElement(byLogout).click();
 	}
 }
