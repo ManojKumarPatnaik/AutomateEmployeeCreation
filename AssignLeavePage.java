@@ -28,25 +28,25 @@ public class AssignLeavePage {
 		wait.until(ExpectedConditions.elementToBeClickable(byMenuLeave));
 		driver.findElement(byMenuLeave).click();
 		wait.until(ExpectedConditions.elementToBeClickable(byAssignLeave));
-	    driver.findElement(byAssignLeave).click();
+	    	driver.findElement(byAssignLeave).click();
 	    
 		// fill in information
-	    driver.findElement(byEmpName).sendKeys(emp.get("First Name") + " " + emp.get("Middle Name") + " " + emp.get("Last Name"));
-	    {
-	      WebElement dropdown = driver.findElement(byLeaveType);
-	      dropdown.findElement(By.xpath("//option[. = '" + emp.get("Leave Type") + "']")).click();
-	    }
-	    driver.findElement(byLeaveFromDate).clear();
-	    driver.findElement(byLeaveFromDate).sendKeys(emp.get("From Date"));
-	    driver.findElement(byLeaveToDate).clear();
-	    driver.findElement(byLeaveToDate).sendKeys(emp.get("To Date"));
+	    	driver.findElement(byEmpName).sendKeys(emp.get("First Name") + " " + emp.get("Middle Name") + " " + emp.get("Last Name"));
+	    	{
+	     		WebElement dropdown = driver.findElement(byLeaveType);
+	      		dropdown.findElement(By.xpath("//option[. = '" + emp.get("Leave Type") + "']")).click();
+	    	}
+	    	driver.findElement(byLeaveFromDate).clear();
+	    	driver.findElement(byLeaveFromDate).sendKeys(emp.get("From Date"));
+	    	driver.findElement(byLeaveToDate).clear();
+	    	driver.findElement(byLeaveToDate).sendKeys(emp.get("To Date"));
 		
-	    // first click is to remove overlay, second click registers
-	    driver.findElement(byAssignBtn).click();
-	    driver.findElement(byAssignBtn).click();
+	    	// first click is to remove overlay, second click registers
+	    	driver.findElement(byAssignBtn).click();
+	    	driver.findElement(byAssignBtn).click();
 	    
-	    // confirm button if employee doesn't have enough balance for leave
-	    wait.until(ExpectedConditions.elementToBeClickable(byConfirmBtn));
-	    driver.findElement(byConfirmBtn).click();
+	    	// confirm button if employee doesn't have enough balance for leave
+	    	wait.until(ExpectedConditions.elementToBeClickable(byConfirmBtn));
+	    	driver.findElement(byConfirmBtn).click();
 	}
 }
