@@ -33,35 +33,35 @@ public class EditContactPage {
 		// navigate from employee page to edit contact page
 		driver.findElement(byContactDetails).click();
 		wait.until(ExpectedConditions.elementToBeClickable(byBtnSave));
-	    driver.findElement(byBtnSave).click();
+	    	driver.findElement(byBtnSave).click();
 	    
-	    // fill in information
-	    driver.findElement(byStreet1).clear();
-	    driver.findElement(byStreet1).sendKeys(emp.get("Address Street 1"));
-	    driver.findElement(byStreet2).clear();
-	    driver.findElement(byStreet2).sendKeys(emp.get("Address Street 2"));
-	    driver.findElement(byCity).clear();
-	    driver.findElement(byCity).sendKeys(emp.get("City"));
-	    driver.findElement(byProvince).clear();
-	    driver.findElement(byProvince).sendKeys(emp.get("State/Province"));
-	    driver.findElement(byZipcode).clear();
-	    driver.findElement(byZipcode).sendKeys(emp.get("Zip/Postal Code"));
-	    {
-	      WebElement dropdown = driver.findElement(byCountry);
-	      dropdown.findElement(By.xpath("//option[. = '" + emp.get("Country") + "']")).click();
-	    }
-	    driver.findElement(byHomePhone).clear();
-	    driver.findElement(byHomePhone).sendKeys(emp.get("Home Telephone"));
-	    driver.findElement(byMobilePhone).clear();
-	    driver.findElement(byMobilePhone).sendKeys(emp.get("Mobile"));
-	    driver.findElement(byWorkPhone).clear();
-	    driver.findElement(byWorkPhone).sendKeys(emp.get("Work Telephone"));
-	    driver.findElement(byWorkEmail).clear();
-	    driver.findElement(byWorkEmail).sendKeys(emp.get("Work Email"));
-	    driver.findElement(byOtherEmail).clear();
-	    driver.findElement(byOtherEmail).sendKeys(emp.get("Other Email"));
+	    	// fill in information
+	    	driver.findElement(byStreet1).clear();
+	    	driver.findElement(byStreet1).sendKeys(emp.get("Address Street 1"));
+	    	driver.findElement(byStreet2).clear();
+	    	driver.findElement(byStreet2).sendKeys(emp.get("Address Street 2"));
+	    	driver.findElement(byCity).clear();
+	    	driver.findElement(byCity).sendKeys(emp.get("City"));
+	    	driver.findElement(byProvince).clear();
+	    	driver.findElement(byProvince).sendKeys(emp.get("State/Province"));
+	    	driver.findElement(byZipcode).clear();
+	    	driver.findElement(byZipcode).sendKeys(emp.get("Zip/Postal Code"));
+	    	{
+	      	  WebElement dropdown = driver.findElement(byCountry);
+	      	  dropdown.findElement(By.xpath("//option[. = '" + emp.get("Country") + "']")).click();
+	    	}
+	    	driver.findElement(byHomePhone).clear();
+	    	driver.findElement(byHomePhone).sendKeys(emp.get("Home Telephone"));
+	    	driver.findElement(byMobilePhone).clear();
+	    	driver.findElement(byMobilePhone).sendKeys(emp.get("Mobile"));
+	    	driver.findElement(byWorkPhone).clear();
+	    	driver.findElement(byWorkPhone).sendKeys(emp.get("Work Telephone"));
+	    	driver.findElement(byWorkEmail).clear();
+	    	driver.findElement(byWorkEmail).sendKeys(emp.get("Work Email"));
+	    	driver.findElement(byOtherEmail).clear();
+	    	driver.findElement(byOtherEmail).sendKeys(emp.get("Other Email"));
 		
-	    // save
-	    driver.findElement(byBtnSave).click();
+	    	// save
+	    	driver.findElement(byBtnSave).click();
 	}
 }
