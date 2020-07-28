@@ -33,8 +33,8 @@ public class AssignLeavePage {
 		// fill in information
 	    	driver.findElement(byEmpName).sendKeys(emp.get("First Name") + " " + emp.get("Middle Name") + " " + emp.get("Last Name"));
 	    	{
-	     		WebElement dropdown = driver.findElement(byLeaveType);
-	      		dropdown.findElement(By.xpath("//option[. = '" + emp.get("Leave Type") + "']")).click();
+	     	  WebElement dropdown = driver.findElement(byLeaveType);
+	      	  dropdown.findElement(By.xpath("//option[. = '" + emp.get("Leave Type") + "']")).click();
 	    	}
 	    	driver.findElement(byLeaveFromDate).clear();
 	    	driver.findElement(byLeaveFromDate).sendKeys(emp.get("From Date"));
