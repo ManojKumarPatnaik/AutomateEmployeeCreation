@@ -30,37 +30,37 @@ public class EditJobPage {
 		// navigate from employee page to edit job page
 		wait.until(ExpectedConditions.elementToBeClickable(byJobDetails));
 		driver.findElement(byJobDetails).click();
-	    driver.findElement(byBtnSave).click();
+	    	driver.findElement(byBtnSave).click();
 	    
-	    // fill in information
-	    {
-	      WebElement dropdown = driver.findElement(byJobTitle);
-	      dropdown.findElement(By.xpath("//option[. = '" + emp.get("Job Title") + "']")).click();
-	    }
-	    {
-	      WebElement dropdown = driver.findElement(byEmploymentStatus);
-	      dropdown.findElement(By.xpath("//option[. = '" + emp.get("Employment Status") + "']")).click();
-	    }
-	    {
-	      WebElement dropdown = driver.findElement(byEeoCategory);
-	      dropdown.findElement(By.xpath("//option[. = '" + emp.get("Job Category") + "']")).click();
-	    }
-	    {
-	      WebElement dropdown = driver.findElement(byJobUnit);
-	      dropdown.findElement(By.xpath("//option[. = '" + emp.get("Sub Unit") + "']")).click();
-	    }
-	    {
-	      WebElement dropdown = driver.findElement(byJobLocation);
-	      dropdown.findElement(By.xpath("//option[. = '" + emp.get("Location") + "']")).click();
-	    }
-	    driver.findElement(byContractStartDate).clear();
-	    driver.findElement(byContractStartDate).sendKeys(emp.get("Contract Start Date"));
-	    driver.findElement(byContractEndDate).clear();
-	    driver.findElement(byContractEndDate).sendKeys(emp.get("Contract End Date"));
-	    driver.findElement(byJoinedDate).clear();
-	    driver.findElement(byJoinedDate).sendKeys(emp.get("Joined Date"));
+	    	// fill in information
+	    	{
+	      	  WebElement dropdown = driver.findElement(byJobTitle);
+	      	  dropdown.findElement(By.xpath("//option[. = '" + emp.get("Job Title") + "']")).click();
+	    	}
+	    	{
+	      	  WebElement dropdown = driver.findElement(byEmploymentStatus);
+	      	  dropdown.findElement(By.xpath("//option[. = '" + emp.get("Employment Status") + "']")).click();
+	    	}
+	    	{
+	      	  WebElement dropdown = driver.findElement(byEeoCategory);
+	      	  dropdown.findElement(By.xpath("//option[. = '" + emp.get("Job Category") + "']")).click();
+	    	}
+	    	{
+	      	  WebElement dropdown = driver.findElement(byJobUnit);
+	      	  dropdown.findElement(By.xpath("//option[. = '" + emp.get("Sub Unit") + "']")).click();
+	    	}
+	    	{
+	      	  WebElement dropdown = driver.findElement(byJobLocation);
+	      	  dropdown.findElement(By.xpath("//option[. = '" + emp.get("Location") + "']")).click();
+	    	}
+	    	driver.findElement(byContractStartDate).clear();
+	   	driver.findElement(byContractStartDate).sendKeys(emp.get("Contract Start Date"));
+	   	driver.findElement(byContractEndDate).clear();
+	   	driver.findElement(byContractEndDate).sendKeys(emp.get("Contract End Date"));
+	   	driver.findElement(byJoinedDate).clear();
+	    	driver.findElement(byJoinedDate).sendKeys(emp.get("Joined Date"));
 	    
-	    // save
-	    driver.findElement(byBtnSave).click();
+	    	// save
+	    	driver.findElement(byBtnSave).click();
 	}
 }
